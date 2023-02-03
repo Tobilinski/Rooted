@@ -23,6 +23,7 @@ public class itemRemove : MonoBehaviour
         switch (item.itemtype)
         {
             case Items.itemType.Key:
+                Debug.Log("Key Open");
                 break;
             case Items.itemType.Book:
                 break;
