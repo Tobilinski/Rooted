@@ -33,6 +33,11 @@ public class InventorySystem : MonoBehaviour
 
     public void ListItem()
     {
+        foreach (Transform item in itemContent)
+        {
+            Destroy(item.gameObject);
+        }
+
         foreach (var iTem in items)
         {
             GameObject obj = Instantiate(inventoryItem, itemContent);
