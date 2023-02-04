@@ -11,6 +11,7 @@ public class InventorySystem : MonoBehaviour
 
     public Transform itemContent;
     public GameObject inventoryItem;
+    public GameObject door;
 
     public Toggle delete;
 

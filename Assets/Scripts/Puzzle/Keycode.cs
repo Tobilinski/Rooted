@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class Keycode : MonoBehaviour
 {
-   [SerializeField] private Text Ans;
+   [SerializeField] private TextMeshProUGUI Ans;
     private string _Answer = "12345";
 
     // Update is called once per frame

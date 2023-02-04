@@ -24,6 +24,8 @@ public class itemRemove : MonoBehaviour
         {
             case Items.itemType.Key:
                 Debug.Log("Key Open");
+                removeItem();
+                InventorySystem.intance.door.SetActive(false);
                 break;
             case Items.itemType.Book:
                 break;
@@ -32,6 +34,6 @@ public class itemRemove : MonoBehaviour
             default:
                 break;
         }
-        removeItem();
+        
     }
 }
