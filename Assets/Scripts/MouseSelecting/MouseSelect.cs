@@ -6,22 +6,19 @@ public class MouseSelect : MonoBehaviour
 {
     public Camera camera;
     public CamMove Script;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    
 
     // Update is called once per frame
     void Update()
     {
         ToScreen();
         ToBox();
+        ToMaze();
     }
 
     private void ToScreen()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
 
@@ -38,7 +35,7 @@ public class MouseSelect : MonoBehaviour
         }
 
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1))
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
 
@@ -56,7 +53,7 @@ public class MouseSelect : MonoBehaviour
     }
     private void ToBox()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
 
@@ -67,13 +64,13 @@ public class MouseSelect : MonoBehaviour
                     Vector3 distanceToTarget = hitInfo.point - transform.position;
                     Vector3 forceDirection = distanceToTarget.normalized;
                     Script.MoveToBox();
-                    print("hit");
+                    print("hitChair");
                 }
             }
         }
 
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButtonDown(1))
         {
             Ray ray = camera.ScreenPointToRay(Input.mousePosition);
 
@@ -85,6 +82,25 @@ public class MouseSelect : MonoBehaviour
                     Vector3 forceDirection = distanceToTarget.normalized;
                     Script.MoveFromBox();
                     print("hit");
+                }
+            }
+        }
+    }
+
+    private void ToMaze()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out RaycastHit hitInfo))
+            {
+                if (hitInfo.collider.gameObject.GetComponent<Target3>() != null)
+                {
+                    Vector3 distanceToTarget = hitInfo.point - transform.position;
+                    Vector3 forceDirection = distanceToTarget.normalized;
+                    Script.MoveToMaze();
+                    print("Maze");
                 }
             }
         }

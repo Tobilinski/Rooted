@@ -15,6 +15,9 @@ public class CamMove : MonoBehaviour
     public GameObject Target3;
     public GameObject panel;
 
+    public GameObject NormalCam;
+    public GameObject MazeCam;
+
  
     public Camera camera;
     // Start is called before the first frame update
@@ -42,6 +45,12 @@ public class CamMove : MonoBehaviour
         transform.position = new Vector3(BoxFrom.position.x, BoxFrom.position.y, BoxFrom.position.z);
         panel.SetActive(false);
         camera.transform.LookAt(Target2.transform);
+    }
+    public void MoveToMaze()
+    {
+        NormalCam.SetActive(false);
+        MazeCam.SetActive(true);
+        panel.SetActive(false);
     }
 
 }
