@@ -35,6 +35,8 @@ public class CountDown : MonoBehaviour
 
         } while (timer1 > 0);
 
+        Debug.Log("Awe");
+
 
     }
 
