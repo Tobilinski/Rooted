@@ -76,8 +76,8 @@ public class CountDown : MonoBehaviour
     {
         while (timer1 > 0)
         {
-            yield return new WaitForSeconds(5f);
-            timer1 -= 20f;
+            yield return new WaitForSeconds(10f);
+            timer1 -= 50f;
             if (timer1 < 10)
             {
 
