@@ -6,25 +6,35 @@ public class CamMove : MonoBehaviour
 {
     public Transform ScreenTo;
     public Transform ScreenFrom;
+    public Transform BoxTo;
+    public Transform BoxFrom;
     public float speed = 1f;
     public Vector3 velocity= Vector3.zero;
+    public GameObject Target1;
+    public GameObject Target2;
+    public GameObject Target3;
+    public Camera camera;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      
-    }
+   
     public void MoveToScreen()
     {
-       transform.position = Vector3.SmoothDamp(transform.position, ScreenTo.position, ref velocity,speed * Time.deltaTime); 
+       transform.position = new Vector3(ScreenTo.position.x, ScreenTo.position.y, ScreenTo.position.z);
+       camera.transform.LookAt(Target1.transform);
     }
     public void MoveFromScreen()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, ScreenFrom.position, ref velocity, speed * Time.deltaTime);
+        transform.position = new Vector3(ScreenFrom.position.x, ScreenFrom.position.y, ScreenFrom.position.z);
+        camera.transform.LookAt(Target2.transform);
     }
+    public void MoveToBox()
+    {
+        transform.position = new Vector3(BoxTo.position.x, BoxTo.position.y, BoxTo.position.z);   
+        camera.transform.LookAt(Target3.transform);
+    }
+    public void MoveFromBox()
+    {
+        transform.position = new Vector3(BoxFrom.position.x, BoxFrom.position.y, BoxFrom.position.z);
+        camera.transform.LookAt(Target2.transform);
+    }
+
 }
