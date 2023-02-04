@@ -1,7 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CountDown : MonoBehaviour
 {
     [SerializeField] float startTime = 60f;
@@ -37,7 +37,7 @@ public class CountDown : MonoBehaviour
 
         Debug.Log("Awe");
 
-
+        SceneManager.LoadScene("GameOver");
     }
 
     private void formatText()
@@ -88,7 +88,7 @@ public class CountDown : MonoBehaviour
 
                 yield return null;
             }
-           
+
             
         }
         
