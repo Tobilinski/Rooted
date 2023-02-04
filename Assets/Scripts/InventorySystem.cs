@@ -43,16 +43,16 @@ public class InventorySystem : MonoBehaviour
             GameObject obj = Instantiate(inventoryItem, itemContent);
             var itemName = obj.transform.Find("Name").GetComponent<TextMeshProUGUI>();
             var itemIcon = obj.transform.Find("Image").GetComponent<Image>();
-            var itemRemove = obj.transform.Find("Exit").GetComponent<Button>();
+            //var itemRemove = obj.transform.Find("Exit").GetComponent<Button>();
 
 
             itemName.text = iTem.itemName;
             itemIcon.sprite = iTem.icon;
 
-            if (delete.isOn)
-            {
-                itemRemove.gameObject.SetActive(true);
-            }
+            //if (delete.isOn)
+            //{
+            //    itemRemove.gameObject.SetActive(true);
+            //}
         }
 
         setInventoryItems();
