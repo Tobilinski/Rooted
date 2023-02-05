@@ -100,6 +100,7 @@ public class MouseSelect : MonoBehaviour
                     Vector3 distanceToTarget = hitInfo.point - transform.position;
                     Vector3 forceDirection = distanceToTarget.normalized;
                     Script.MoveToMaze();
+
                     print("Maze");
                 }
             }
