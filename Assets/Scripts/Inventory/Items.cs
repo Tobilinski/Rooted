@@ -14,8 +14,9 @@ public class Items : ScriptableObject
     public enum itemType
     {
         Key,
-        Book,
-        Roock
+        Scroll,
+        Box
+      
     }
 
 }

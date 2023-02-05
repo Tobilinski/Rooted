@@ -5,6 +5,7 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     private Renderer renderer;
+    public Material computer;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,6 @@ public class Target : MonoBehaviour
     }
     private void OnMouseExit()
     {
-        renderer.material.color = Color.white;
+        renderer.material.color = computer.color;
     }
 }

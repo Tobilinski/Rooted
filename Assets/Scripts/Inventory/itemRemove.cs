@@ -27,9 +27,9 @@ public class itemRemove : MonoBehaviour
                 removeItem();
                 InventorySystem.intance.door.SetActive(false);
                 break;
-            case Items.itemType.Book:
+            case Items.itemType.Scroll:
                 break;
-            case Items.itemType.Roock:
+            case Items.itemType.Box:
                 break;
             default:
                 break;

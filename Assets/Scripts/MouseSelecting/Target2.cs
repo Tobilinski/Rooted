@@ -5,7 +5,7 @@ using UnityEngine;
 public class Target2 : MonoBehaviour
 {
     private Renderer renderer;
-
+    public Material couch;
     void Start()
     {
         renderer = GetComponent<Renderer>();
@@ -16,6 +16,6 @@ public class Target2 : MonoBehaviour
     }
     private void OnMouseExit()
     {
-        renderer.material.color = Color.white;
+        renderer.material.color = couch.color;
     }
 }

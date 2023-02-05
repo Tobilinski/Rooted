@@ -16,4 +16,12 @@ public class ItemPickUP : MonoBehaviour
     {
         pickUP();
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            pickUP();
+        }
+    }
 }
