@@ -13,9 +13,11 @@ public class Items : ScriptableObject
 
     public enum itemType
     {
-        Key,
+        MotelKey,
+        CrimeKey,
         Scroll,
-        Box
+        Box,
+        OfficeKey
       
     }
 

@@ -45,7 +45,7 @@ public class InventorySystem : MonoBehaviour
             var itemName = obj.transform.Find("Name").GetComponent<TextMeshProUGUI>();
             var itemIcon = obj.transform.Find("Image").GetComponent<Image>();
             //var itemRemove = obj.transform.Find("Exit").GetComponent<Button>();
-
+            
 
             itemName.text = iTem.itemName;
             itemIcon.sprite = iTem.icon;
@@ -86,7 +86,10 @@ public class InventorySystem : MonoBehaviour
         for (int i = 0; i < items.Count; i++)
         {
             itemInventory[i].AddItem(items[i]);
+            
         }
     }
+
+    
 }
 

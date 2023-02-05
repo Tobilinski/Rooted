@@ -209,6 +209,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1294542582790168175}
+  - component: {fileID: 7988580186609800791}
+  - component: {fileID: 7988580186609800789}
+  - component: {fileID: 7988580186609800790}
   m_Layer: 0
   m_Name: Key
   m_TagString: Untagged
@@ -225,13 +228,52 @@ Transform:
   m_GameObject: {fileID: 1926682138080658645}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -56.098415, y: 0.00000047683716, z: 30.636814}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5138526842991537999}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7988580186609800791
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926682138080658645}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.8040373, y: 6.2709775, z: 6.386386}
+  m_Center: {x: 0.47642636, y: 0.7207273, z: 2.6931934}
+--- !u!114 &7988580186609800789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926682138080658645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8dd8df64420564b80d10efe7bffbb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: bdbc1f1b68238e845aa6b3f1869e6a63, type: 2}
+--- !u!114 &7988580186609800790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926682138080658645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd23c214e2ef75a498ddbcdabf61b61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: bdbc1f1b68238e845aa6b3f1869e6a63, type: 2}
 --- !u!1 &2079813118365820174
 GameObject:
   m_ObjectHideFlags: 0
